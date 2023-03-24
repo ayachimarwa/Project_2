@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet"
+    />
+  
+  
+  <title>Frontend Mentor | Launch countdown timer</title>
+
+  <script>
+    function updateTimer(){
+      const future = Date.parse("2024-01-01T00:00:00.000Z");
+      const now = new Date();
+      const diff= future - now;
+
+      const days = Math.floor(diff/(1000 * 60 * 60 * 24));
+      const hours = Math.floor(diff/(1000 * 60 * 60 ));
+      const mins= Math.floor(diff/(1000 * 60));
+      const secs = Math.floor(diff/(1000));
+
+      const d = days;
+      const h = hours - days * 24;
+      const m = mins - hours * 60;
+      const s = secs - mins * 60;
+
+      
+
+      const daysE1 = document.getElementById("days");
+      daysE1.innerText = d;
+      const hoursE1 = document.getElementById("hours");
+      hoursE1.innerText = h;
+      const minutesE1 = document.getElementById("minutes");
+      minutesE1.innerText = m;
+      const secondsE1 = document.getElementById("seconds");
+      secondsE1.innerText = s;
+    }
+      setInterval(updateTimer, 1000);
+
+    
+  </script>
+</head>
+<body>  
+  <div class="background">
+    <img  class="background-stars" src="./images/bg-stars.svg" alt="" >
+    <img    class="background-hills" src="./images/pattern-hills.svg"  alt="">
+  </div>
+  <div class="counter">
+    <div class="title">WE'RE LAUNCHING SOON</div>
+    <div class="items">
+      <div class="item">
+        <div  id="days"  class="item-value">08</div>
+        <div  class="item-text">Days</div>
+      </div>
+
+      <div class="item">
+        <div  id="hours" class="item-value">23</div>
+        <div  class="item-text">Hours</div>
+      </div>
+
+      <div class="item">
+        <div  id="minutes"  class="item-value">55</div>
+        <div class="item-text">Minutes</div>
+      </div>
+
+      <div class="item">
+        <div  id="seconds"  class="item-value">41</div>
+        <div class="item-text">Seconds</div>
+      </div>
+    </div>
+    <div class="social" >
+      <img src="./images/icon-facebook.svg" alt="">
+      <img src="./images/icon-pinterest.svg" alt="">
+      <img src="./images/icon-instagram.svg" alt="">
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Marwa Ayachi</a>.
+    </div> 
+     
+  </div>
+
+  
+</body>
+</html>

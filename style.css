@@ -1,0 +1,171 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1;
+    font: 16px;
+}
+
+body{
+    margin:0;
+    padding:0;
+    position: relative;
+    height: 100vh;
+}
+
+.background{
+    position: absolute;
+    height: 100%;
+    background-image: linear-gradient(109.6deg,  rgb(0, 0, 0) 11.2%, rgb(41, 4, 44) 98.6% );
+}
+.background > img{
+    width: 100%;
+    object-fit: cover;
+} 
+
+
+.background .background-stars{
+    height: 80%; 
+}
+
+.background-hills{
+    height: 20%; 
+}
+.counter{
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+
+
+}
+
+.counter .title{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 69px;
+    letter-spacing: 5px;
+}
+.counter .items{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 0px 250px;
+}
+.counter .item{
+    color:white;
+    text-align: center;
+    width: 25%;
+    height: 220px;
+}
+.counter .item .item-value{
+    padding: 32px 16px;
+    background-color: rgb(38, 31, 44);
+    height: 80%;
+    border-radius: 12px;
+    color:rgb(146, 41, 62);
+    font-size: 72px;
+    font-weight: 700;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+ 
+}
+.counter .item .item-text{
+    padding: 12px;
+    height: 20%;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(53, 48, 57);
+    letter-spacing: 2px;
+
+}
+.counter .social{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    bottom: 50px;
+    left:calc(50% - 104px/2);/* une méthode bech n7ot les 3 images f centre*/
+}
+
+.counter .attribution{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 50px;
+    color: #483352;
+    margin-top: auto;
+    word-spacing: 5px;
+    font-size: 12px;
+    font-weight: 15px;
+
+}
+
+@media only screen and (max-width:1024px){
+    .counter .title{
+        font-size: 25px;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 70px;
+        padding-top: 200px ;
+        
+
+    }
+    .counter .items{
+        gap: 20px;
+        padding: 0px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .counter .item{
+        width: 35%;
+        height: 120px;
+    }
+    .counter .item .item-value{
+        padding: 15px 10px;
+        height: 50%;
+        border-radius: 12px;
+        font-size: 20px;
+        font-weight: 600;
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        margin: 8px;
+     
+    }
+    .counter .item .item-text{
+        padding: 1px;
+        height: 20%;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    
+    }
+   
+    .counter .social{
+        position:absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        bottom: 50px;
+        left:calc(50% - 104px/2);/* une méthode bech n7ot les 3 images f centre*/
+    }
+}
+
